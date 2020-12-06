@@ -47,6 +47,12 @@
 
             .commit {
                 width: 100%;
+
+                &__author,
+                &__message {
+                    font-weight: 600;
+                    margin-right: 0.5rem;
+                }
             }
 
             .commit:not(:last-of-type) {

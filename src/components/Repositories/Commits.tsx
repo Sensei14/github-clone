@@ -25,10 +25,13 @@ export const Commits: React.FC<CommitsProps> = ({ commits_url }) => {
     const commitsList = commits.map((commit) => (
         <li key={commit.url} className='commit'>
             <div>
-                <span>Author: {commit.commit.author.name}</span>
+                <div>
+                    <span className='commit__author'>Author:</span>
+                    <span>{commit.commit.author.name}</span>
+                </div>
 
                 <p>
-                    <label>Commit message: </label>
+                    <label className='commit__message'>Commit message: </label>
 
                     {commit.commit.message}
                 </p>
