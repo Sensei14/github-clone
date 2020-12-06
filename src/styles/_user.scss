@@ -1,0 +1,212 @@
+.user {
+    width: 80%;
+    margin: 2rem auto;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__numbers {
+        display: flex;
+        justify-content: space-evenly;
+
+        &--card {
+            background-color: #fff;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            width: 18rem;
+            height: 5rem;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 1.2rem;
+                margin-left: 2rem;
+
+                span:first-of-type {
+                    font-size: 1.7rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &__info {
+        margin-top: 2rem;
+        background-color: #fff;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        width: 40rem;
+        padding: 2rem;
+        border-radius: 6px;
+        height: 26rem;
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        &--personal {
+            display: flex;
+            align-items: center;
+
+            div {
+                margin-left: 2rem;
+            }
+            span {
+                display: block;
+                margin: 0.5rem 0;
+
+                &.name {
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+            }
+            p {
+                margin-top: 1rem;
+            }
+        }
+
+        &--nonpersonal {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+
+            span {
+                margin: 0.5rem 0;
+                display: flex;
+                align-items: center;
+            }
+
+            .icon {
+                width: 32px;
+            }
+        }
+    }
+
+    &__followers {
+        margin-top: 2rem;
+        background-color: #fff;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        width: 40rem;
+        padding: 2rem;
+        border-radius: 6px;
+        height: 26rem;
+
+        .users-list {
+            justify-content: flex-start;
+
+            &__user {
+                padding: 3px;
+                margin: 6px;
+                box-shadow: none;
+                cursor: default;
+                img {
+                    width: 42px;
+                }
+            }
+        }
+    }
+
+    &__repos {
+        margin-top: 2rem;
+        background-color: #fff;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
+        border-radius: 6px;
+
+        .repos-list {
+            margin-top: 1rem;
+            width: 100%;
+
+            &__item {
+                width: 35rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1650px) {
+    .user {
+        &__info {
+            width: 45%;
+        }
+
+        &__followers {
+            width: 45%;
+
+            .users-list {
+                &__user {
+                    width: auto;
+                }
+            }
+        }
+
+        .repos-list {
+            &__item {
+                width: 30rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .repos-list {
+        &__item {
+            width: 22rem;
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .user {
+        &__numbers {
+            flex-wrap: wrap;
+
+            &--card {
+                margin: 1rem 2rem;
+            }
+        }
+
+        &__row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__info {
+            width: 90%;
+            height: auto;
+        }
+
+        &__followers {
+            width: 90%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .user {
+        width: 90%;
+
+        .repos-list {
+            &__item {
+                width: 80vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .user {
+        &__info {
+            &--personal {
+                flex-direction: column;
+            }
+        }
+    }
+}

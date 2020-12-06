@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    background-color: #f1f5f8;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #118ab2;
+
+    &:hover {
+        color: #05668d;
+    }
+}
+
+.return-btn {
+    color: #118ab2;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    display: inline-block;
+}
